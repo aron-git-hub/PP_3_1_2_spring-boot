@@ -1,0 +1,13 @@
+body {
+    font-family: "Trebuchet MS", serif;
+    font-style: italic;
+}
+
+table, th, td {
+    border: thin solid whitesmoke;
+    text-align: center;
+}
+
+.er {
+    color: brown;
+}
