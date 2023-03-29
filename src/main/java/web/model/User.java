@@ -1,7 +1,5 @@
 package web.model;
 
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Entity;
