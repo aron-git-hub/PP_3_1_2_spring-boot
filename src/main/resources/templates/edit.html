@@ -6,9 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/layout.css}"/>
 </head>
 <body>
-
 <h1>edit user</h1>
-
 <form th:method="PATCH" th:action="@{/user_{id}(id=${user.getId()})}" th:object="${user}">
     <div>
         <label for="first_name">First name:</label>

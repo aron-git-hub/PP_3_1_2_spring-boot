@@ -6,30 +6,28 @@
     <link rel="stylesheet" th:href="@{/css/layout.css}"/>
 </head>
 <body>
-<div>
-    <h1>add user</h1>
-    <form th:method="POST" th:action="@{/}" th:object="${user}">
-        <div>
-            <label for="first_name">First name:</label>
-            <br/>
-            <input type="text" th:charset="utf-8" th:field="*{firstName}" id="first_name" required/>
-            <div class="er" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
-        </div>
-        <div>
-            <label for="second_name">Second name:</label>
-            <br/>
-            <input type="text" th:charset="utf-8" th:field="*{secondName}" id="second_name" required/>
-            <div class="er" th:if="${#fields.hasErrors('secondName')}" th:errors="*{secondName}"></div>
-        </div>
-        <div>
-            <label for="age">Age:</label>
-            <br/>
-            <input type="text" th:field="*{age}" id="age" required/>
-            <div class="er" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
-        </div>
-        <input type="submit" value="create"/>
-        <input type="button" value="cancel" onclick="window.location.href='/'"/>
-    </form>
-</div>
+<h1>add user</h1>
+<form th:method="POST" th:action="@{/}" th:object="${user}">
+    <div>
+        <label for="first_name">First name:</label>
+        <br/>
+        <input type="text" th:charset="utf-8" th:field="*{firstName}" id="first_name" required/>
+        <div class="er" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+    </div>
+    <div>
+        <label for="second_name">Second name:</label>
+        <br/>
+        <input type="text" th:charset="utf-8" th:field="*{secondName}" id="second_name" required/>
+        <div class="er" th:if="${#fields.hasErrors('secondName')}" th:errors="*{secondName}"></div>
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <br/>
+        <input type="text" th:field="*{age}" id="age" required/>
+        <div class="er" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
+    </div>
+    <input type="submit" value="create"/>
+    <input type="button" value="cancel" onclick="window.location.href='/'"/>
+</form>
 </body>
 </html>
